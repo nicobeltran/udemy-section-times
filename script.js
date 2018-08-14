@@ -2,7 +2,6 @@ const getSectionTimes = () => {
     // gets each section of the dashboard page
     const sections = document.querySelectorAll('.section--section--CIk7q');
 
-
     sections.forEach((div, index) => {
         // time variables
         var hours = 0;
@@ -24,11 +23,13 @@ const getSectionTimes = () => {
                 }
         });
 
+        // check if seconds can be turned into minutes
         if (seconds >= 60) {
             mins += Math.floor(seconds/60);
             seconds = seconds % 60;
         }
 
+        // check if minutes can be converted to hours
         if (mins >= 60) {
             hours += Math.floor(mins/60);
             mins = mins%60;
@@ -36,6 +37,6 @@ const getSectionTimes = () => {
 
         console.log(`Section ${index+1} | ${title}\nRuntime: ${hours}hr(s) ${mins} min(s) ${seconds} seconds.`);
     });
-    
+
 };
 getSectionTimes();
