@@ -34,8 +34,7 @@ const getSectionTimes = () => {
             mins = mins%60;
         }
 
-
-        console.log(`Section ${index+1} ${title}: ${hours}hr(s) ${mins} min(s) ${seconds} seconds.`);
+        console.log(`Section ${index+1} | ${title}\nRuntime: ${hours}hr(s) ${mins} min(s) ${seconds} seconds.`);
     });
     
 };
